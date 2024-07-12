@@ -1,3 +1,89 @@
+# Doctor Booking System
+
+## Introduction
+
+This project is a Laravel-based web application for a doctor booking system. It provides functionalities for patients to book appointments and for doctors to manage their schedules.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed on your local machine:
+
+- PHP (version 7.x recommended)
+- Composer
+- MySQL or any other compatible database system
+- Git
+
+## Getting Started
+
+Follow these steps to get the project up and running on your local machine:
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/sagarsurya/doctor-booking-system.git
+cd doctor-booking-system
+```
+### 2. Set up your environment
+
+```bash
+cp .env.example .env
+```
+
+Edit the .env file and set your database credentials:
+
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
+```
+
+### 3. Install dependencies
+
+```bash
+composer install
+```
+
+### 4. Run migrations and seeders
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+### 5. Start the development server
+
+```bash
+php artisan serve
+```
+The application will be available at http://localhost:8000
+
+
+## API Documentation
+
+The API documentation for this project can be found [here](https://drive.google.com/file/d/1XI50FMd4bvVXC1xU5XQFcB9OkndFUiC8/view?usp=sharing).
+
+## API Endpoints
+
+### Authentication
+
+- **POST /api/register**: Register a new user.
+- **POST /api/login**: Log in a user.
+- **POST /api/logout**: Log out the authenticated user.
+
+### Appointments
+
+- **POST /api/appointments**: Create a new appointment.
+- **GET /api/appointments**: List all appointments, filterable by date.
+- **PUT /api/appointments/{appointment}**: Update the status of an appointment.
+
+### Doctors
+
+- **GET /api/doctor/appointments**: List all appointments for a doctor, filterable by date.
+- **PUT /api/doctor/appointments/{appointment}**: Update the status of an appointment.
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
